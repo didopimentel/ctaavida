@@ -21,11 +21,11 @@
     </script>
     <script type="text/javascript">
       $(function(){
-      $("#header").load("header.html"); 
+      $("#header").load("header.html", function(){
+          $("#contact-link").parent().addClass('active');
+        }); 
       });
-      $(function(){
-        if (document.location.href.includes('contact.html')) $('.')
-      })
+      
     </script>
   </head>
   <body>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Centro de Terapia
+    </title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+    <script 
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript">
+      $(function(){
+      $("#header").load("header.html", function(){
+          $("#events-link").parent().addClass('active');
+        }); 
+      });
+      $(function() {
+        for(var i = 1; i <= 14; i++) {
+          var img = document.createElement('img');
+          var anchor = document.createElement('a');
+          var column = document.createElement('div');
+          column.className = 'col pt-1';
+          if (i < 10) img.src = `images/events/20131116/evento0${i}.jpg`;
+          else img.src = `images/events/20131116/evento${i}.jpg`;
+          anchor.href = img.src;
+          anchor.target = '_blank';
+          img.style.maxWidth = '150px';
+          img.style.maxHeight = '100px';
+          var row = document.getElementById('event01');
+          anchor.append(img)
+          column.appendChild(anchor);
+          row.appendChild(column);
+        }
+        for(var i = 1; i <= 20; i++) {
+          var img = document.createElement('img');
+          var anchor = document.createElement('a');
+          var column = document.createElement('div');
+          column.className = 'col pt-1';
+          if (i < 10) img.src = `images/events/20140322/evento0${i}.jpg`;
+          else img.src = `images/events/20140322/evento${i}.jpg`;
+          anchor.href = img.src;
+          anchor.target = '_blank';
+          img.style.maxWidth = '150px';
+          img.style.maxHeight = '100px';
+          var row = document.getElementById('event02');
+          anchor.append(img)
+          column.appendChild(anchor);
+          row.appendChild(column);
+        }
+        for(var i = 1; i <= 39; i++) {
+          var img = document.createElement('img');
+          var anchor = document.createElement('a');
+          var column = document.createElement('div');
+          column.className = 'col pt-1';
+          if (i < 10) img.src = `images/events/20170304/evento0${i}.jpg`;
+          else img.src = `images/events/20170304/evento${i}.jpg`;
+          anchor.href = img.src;
+          anchor.target = '_blank';
+          img.style.maxWidth = '150px';
+          img.style.maxHeight = '100px';
+          var row = document.getElementById('event03');
+          anchor.append(img)
+          column.appendChild(anchor);
+          row.appendChild(column);
+        }
+      })
+    </script>
+  </head>
+  <body>
+    <div>
+      <div id="header">
+      </div>
+      <div class="body">
+        <div class="container">
+          <h4 class="pt-4">AAA - Estação Antiga Sorocabana, Agudos SP</h4>
+          <h5>Atividade assistida por Animais realizada em 16/11/2013</h5>
+          <div id="event01" class="row">
+          </div>
+          <h4 class="pt-4">AAA - Abrigo Vila Vicentino, Agudos SP</h4>
+          <h5>Atividade assistida por Animais realizada em 22/03/2014</h5>
+          <div id="event02" class="row">
+          </div>
+          <h4 class="pt-4">AAA - Visão Futuro - Lar Santa Luzia, Agudos SP</h4>
+          <h5>Atividade assistida por Animais realizada em 4/03/2017</h5>
+          <div id="event03" class="row">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

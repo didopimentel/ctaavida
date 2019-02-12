@@ -19,7 +19,9 @@
     </script>
     <script type="text/javascript">
       $(function(){
-      $("#header").load("header.html"); 
+      $("#header").load("header.html", function(){
+          $("#about-link").parent().addClass('active');
+        }); 
       });
     </script>
   </head>
@@ -31,7 +33,7 @@
           <div class="content">
             <div class="row">
               <div class="col-6">
-                <h4>QUEM SOMOS</h4>
+                <h4 id="center">QUEM SOMOS</h4>
                 <p>
                   Fundado em 13 de Julho de 2013 caracterizado associação de direito privado
                   e sem fins lucrativos que atua na promoção da saúde, educação e cultura
@@ -45,7 +47,7 @@
           <div class="content-list">
             <div class="row">
               <div class="col-6">
-                <h4>ESTRUTURA ORGANIZACIONAL</h4>
+                <h4 id="structure">ESTRUTURA ORGANIZACIONAL</h4>
               </div>
             </div>
             <div class="row">
@@ -94,7 +96,7 @@
           <div class="content-list">
             <div class="row">
               <div class="col-6">
-                <h4>EQUIPE ANIMAL</h4>
+                <h4 id="team">EQUIPE ANIMAL</h4>
               </div>
             </div>
             <div class="row">
